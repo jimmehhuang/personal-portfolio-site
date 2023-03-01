@@ -24,11 +24,11 @@ const NavBar = () => {
         }
     ]
     return (
-        <div className='flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed'>
+        <div class='flex justify-between items-center w-full h-20 px-4 bg-black fixed'>
             <p>Jimmy Huang</p>
-            <ul className="flex">
+            <ul class="flex">
                 {navLinks.map(({id, link}) => (            
-                    <li key={id} className="px-4 cursor-pointer capitalize hover:scale-110" >{link}</li>
+                    <li key={id} class="px-4 cursor-pointer capitalize hover:scale-110" >{link}</li>
                 ))}
             </ul>
             
