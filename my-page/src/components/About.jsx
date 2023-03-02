@@ -2,7 +2,6 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
         <div>
             <div>
                 <p>About</p>
@@ -16,7 +15,6 @@ const About = () => {
                 and playing the guitar for church events! I also like to travel and explore new places, 
                 foods, and sights whenever possible.</p>
         </div>
-    </div>
   )
 }
 
