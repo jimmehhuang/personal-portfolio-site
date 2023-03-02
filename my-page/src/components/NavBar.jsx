@@ -29,7 +29,8 @@ const NavBar = ({updatePage}) => {
             <p>Jimmy Huang</p>
             <ul class="flex">
                 {navLinks.map(({id, link}) => (            
-                    <li key={id} class="px-4 cursor-pointer capitalize hover:scale-110" onClick={() => updatePage(id)}>{link}</li>
+                    <li key={id} class="px-4 cursor-pointer capitalize hover:scale-110" 
+                    onClick={() => updatePage(id)}>{link}</li>
                 ))}
             </ul>
             

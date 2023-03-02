@@ -9,33 +9,10 @@ import Projects from './components/Projects'
 
 function App() {
   const [page, setPage] = useState(0)
-  // console.log(page);
-
-  const tabs = [
-    {
-      id: 0,
-      link: <Home/>
-    },
-    {
-      id: 1,
-      link: <About/>
-    },
-    {   
-      id: 2,
-      link: <Projects/>
-    },
-    {
-      id: 3,
-      link: <Experience/>
-    },
-    {
-      id: 4,
-      link: <Contact/>
-    }
-  ]
+  console.log(page);
 
   return (
-    <div class="m-auto text-center">
+    <div class="m-auto text-center bg-blue-900 h-screen">
       <header>
         <NavBar updatePage={setPage}/>
       </header>
