@@ -12,7 +12,7 @@ function App() {
   console.log(page);
 
   return (
-    <div class="m-auto text-center bg-blue-900 h-screen">
+    <div class="m-auto text-center bg-rose-600 h-screen">
       <header>
         <NavBar updatePage={setPage}/>
       </header>

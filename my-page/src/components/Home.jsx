@@ -1,25 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
+import propic from '../assets/images/Mountainpose.jpg'
 import reactLogo from '../assets/react.svg'
 
 const Home = () => {
-    const [count, setCount] = useState(0)
     return (
         <div class="p-10">            
             <h1 class="font-bold text-4xl text-black">Welcome to my page!</h1>
-            <div class="p-8 font-serif">
-                <button class="border-2 border-black rounded-sm" onClick={() => setCount((count) => count + 1)}>
-                    Click Counter : {count}
-                </button>
+            <h1 class="font-bold text-2xl text-black">My name is Jimmy.</h1>
+            <div class="flex justify-center p-8">
+                <img src={propic} class="h-72 w-72 rounded-full object-cover object-right"/>
             </div>
-                <div class="flex flex-row justify-center">
-                    <a href="https://vitejs.dev" target="_blank">
-                        <img src="/vite.svg" class="h-32 p-5" alt="Vite logo" />
-                    </a>
-                    <a href="https://reactjs.org" target="_blank">
-                        <img src={reactLogo} class="h-32 p-5" alt="React logo" />
-                    </a>
-                </div>
-                <p class="font-semibold">This website was created using Vite + React for a front-end framework and Tailwind CSS for design.</p>
+            <div class="flex flex-row justify-center">
+                <a href="https://vitejs.dev" target="_blank">
+                    <img src="/vite.svg" class="h-24 p-5" alt="Vite logo" />
+                </a>
+                <a href="https://reactjs.org" target="_blank">
+                    <img src={reactLogo} class="h-24 p-5" alt="React logo" />
+                </a>
+            </div>
+            <p class="font-semibold">I created this website using Vite + React and Tailwind CSS!</p>
         </div>
     );
 }

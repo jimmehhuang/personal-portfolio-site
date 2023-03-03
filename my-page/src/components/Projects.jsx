@@ -26,18 +26,20 @@ const Projects = () => {
     ]
     return (
         <div>
-            <div>
-                <p>These are some of my major projects I've worked on/contributed to!</p>
+            <div class="p-5">
+                <h1 class="font-semibold text-2xl">These are some of my major projects I've worked on/contributed to!</h1>
             </div>
-            <div>
-            {projectLinks.map(({id, src, repo, app}) => (
-                <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                    <img src={src} alt="" className='rounded-md duration-200 hover:scale-105'/>
+            <div class="flex flex-row justify-center p-5">
+                {projectLinks.map(({id, src, repo, app}) => (
+                <div key={id} class='shadow-md shadow-black rounded-lg hover:scale-105'>
+                    <img src={src} alt={src} class='h-32 w-48 rounded-md duration-200'/>
                     <div className='flex items-center justify-center'>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-                            <a href={repo}>Repo</a></button>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-                            <a href={app}>App</a></button>
+                        <button class='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                            <a href={repo}>Repo</a>
+                        </button>
+                        <button class='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                            <a href={app}>App</a>
+                        </button>
                     </div>
                 </div>
             ))}

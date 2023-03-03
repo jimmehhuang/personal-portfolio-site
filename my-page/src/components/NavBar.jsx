@@ -25,8 +25,8 @@ const NavBar = ({updatePage}) => {
         }
     ]
     return (
-        <div class='flex justify-between items-center w-full h-20 px-4 bg-gray-600'>
-            <p>Jimmy Huang</p>
+        <div class='flex justify-between items-center w-full h-20 px-4 bg-amber-700 font-semibold text-white'>
+            <p>JH</p>
             <ul class="flex">
                 {navLinks.map(({id, link}) => (            
                     <li key={id} class="px-4 cursor-pointer capitalize hover:scale-110" 
