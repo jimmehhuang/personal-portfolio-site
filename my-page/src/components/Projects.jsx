@@ -36,9 +36,11 @@ const Projects = () => {
             <div class="p-10">
                 <h1 class="font-semibold text-2xl">These are some of my major projects I've worked on/contributed to!</h1>
             </div>
-            {projectLinks.map((src, repo, app, title, description) => (
-                <Projectcard {...src} {...repo} {...app} {...title} {...description}/>
-            ))}
+            <div class="flex flex-wrap justify-around">
+                {projectLinks.map((src, repo, app, title, description) => (
+                    <Projectcard {...src} {...repo} {...app} {...title} {...description}/>
+                ))}
+            </div>
         </div>
     )
 }
