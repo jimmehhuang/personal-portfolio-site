@@ -1,12 +1,9 @@
-import React, {useState} from "react";
+import React, {useState} from "react"
+import {RxHamburgerMenu} from 'react-icons/rx'
 
 const NavBar = ({updatePage}) => {
 
     const navLinks = [
-        {
-            id: 0,
-            link: 'Home'
-        },
         {
             id: 1,
             link: 'About'
@@ -25,15 +22,18 @@ const NavBar = ({updatePage}) => {
         }
     ]
     return (
-        <div class='flex justify-between items-center w-full h-20 px-4 bg-rose-600 font-semibold text-white'>
-            <p>JH</p>
-            <ul class="flex">
+        <div className='navbar bg-rose-600 font-semibold text-white'>
+            <div>
+                <a className="btn btn-ghost" onClick={() => updatePage(0)}>JH</a>
+            </div>
+            <div tabIndex={0} className="collapse">
+                <RxHamburgerMenu className="collapse-title"/>
+                <ul className="collapse-content flex flex-col">
                 {navLinks.map(({id, link}) => (            
-                    <li key={id} class="px-4 cursor-pointer capitalize hover:scale-110" 
-                    onClick={() => updatePage(id)}>{link}</li>
-                ))}
-            </ul>
-            
+                    <li key={id} className="px-4 cursor-pointer capitalize hover:scale-110" onClick={() => updatePage(id)}>{link}</li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }
