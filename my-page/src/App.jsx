@@ -16,11 +16,11 @@ function App() {
       <header>
         <NavBar updatePage={setPage}/>
       </header>
-        {page === 0 && <Home/>}
+        {/* {page === 0 && <Home/>}
         {page === 1 && <About/>}
         {page === 2 && <Projects/>}
         {page === 3 && <Experience/>}
-        {page === 4 && <Contact/>}
+        {page === 4 && <Contact/>} */}
     </div>
   )
 }

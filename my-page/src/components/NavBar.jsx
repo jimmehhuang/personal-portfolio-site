@@ -22,18 +22,14 @@ const NavBar = ({updatePage}) => {
         }
     ]
     return (
-        <div className='navbar bg-gradient-to-r from-rose-600 to-purple-700 font-semibold text-white'>
-            <div className="flex-1">
-                <a className="btn btn-ghost" onClick={() => updatePage(0)}>JH</a>
-            </div>
-            <div tabIndex={0} className="collapse">
-                <RxHamburgerMenu className="collapse-title"/>
-                <ul className="collapse-content flex flex-col">
+        <div className='flex justify-between items-center'>
+            <a className="" onClick={() => updatePage(0)}>JH</a>
+                <RxHamburgerMenu className=""/>
+            <ul className="flex">
                 {navLinks.map(({id, link}) => (            
-                    <li key={id} className="btn btn-ghost text-right px-4 cursor-pointer capitalize hover:scale-110 transition duration-400" onClick={() => updatePage(id)}>{link}</li>
+                    <li key={id} className="p-4" onClick={() => updatePage(id)}>{link}</li>
                     ))}
                 </ul>
-            </div>
         </div>
     )
 }
