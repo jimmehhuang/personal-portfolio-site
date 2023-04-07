@@ -28,7 +28,7 @@ const NavBar = ({updatePage}) => {
     ]
     return (
         <div className='flex justify-between items-center'>
-            <button className="p-4 font-semibold md:text-xl" onClick={() => updatePage(0)}>JH</button>
+            <button className="p-4 font-semibold md:text-xl" onClick={() => {updatePage(0); setNav(true);}}>JH</button>
             <ul className="hidden md:flex">
                 {navLinks.map(({id, link}) => (            
                     <li key={id} className="p-4" onClick={() => updatePage(id)}>{link}</li>
@@ -40,7 +40,7 @@ const NavBar = ({updatePage}) => {
             <div className={!nav ? "fixed right-0 top-12 w-{60%} bg-gray-800 ease-in-out duration-500" : "fixed right-[-100%] top-12 ease-in-out duration-500"}>
                <ul className="p-2">
                 {navLinks.map(({id, link}) => (            
-                    <li key={id} className="p-4 border-b border-gray-500" onClick={() => updatePage(id)}>{link}</li>
+                    <li key={id} className="p-4 border-b border-gray-500" onClick={() => {updatePage(id); changeNav();}}>{link}</li>
                     ))}
             </ul> 
             </div>            

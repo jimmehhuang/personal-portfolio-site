@@ -59,10 +59,10 @@ const Experience = () => {
     ]
 
     return (
-        <div className="p-8 w-fit bg-red-950 mt-10">
+        <div className="p-8 bg-red-950 mt-10">
             <p class="font-bold text-2xl">Skills</p>
             <p class="font-semibold text-lg">These are some of the technologies I've worked with.</p>
-            <div class="p-8 flex flex-wrap justify-around">
+            <div class="p-8 flex flex-wrap justify-between">
                 {skillIcons.map(({id, src, title}) => (
                     <img class="object-scale-down h-10 w-12 p-1" key={id} src={src} alt={`${title}`}/>
                 ))}
