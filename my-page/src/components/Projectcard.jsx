@@ -23,10 +23,12 @@ const Projectcard = ({src, app, repo, title, description}) => {
     //         )}
     //     </div>        
     // </div>
-    <div class="relative">
+    <div class="relative group">
         <p>{title}</p>
-        <img src={src} alt={src} className='h-60 w-72 rounded-md hover:bg-black'></img>
-        <p className='absolute left-1/2 bottom-3/4'>{description}</p>
+        <img src={src} alt={src} className='h-60 w-72 rounded-md group-hover:brightness-50'></img>
+        <div className='absolute left-0 top-10 invisible group-hover:visible'>
+            <p className='p-4 w-full'>{description}</p>
+        </div>        
     </div>
   )
 }
