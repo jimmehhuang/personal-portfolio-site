@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 
 const NavBar = ({updatePage}) => {
-    const [nav, setNav] = useState(false);
+    const [nav, setNav] = useState(true);
 
     const changeNav = () => {
         setNav(!nav);
@@ -10,25 +10,25 @@ const NavBar = ({updatePage}) => {
 
     const navLinks = [
         {
-            id: 0,
+            id: 1,
             link: 'About'
         },
         {   
-            id: 1,
+            id: 2,
             link: 'Projects'
         },
         {
-            id: 2,
+            id: 3,
             link: 'Experience'
         },
         {
-            id: 3,
+            id: 4,
             link: 'Contact'
         }
     ]
     return (
         <div className='flex justify-between items-center'>
-            <a className="p-4" onClick={() => updatePage(0)}>JH</a>
+            <button className="p-4 font-semibold md:text-xl" onClick={() => updatePage(0)}>JH</button>
             <ul className="hidden md:flex">
                 {navLinks.map(({id, link}) => (            
                     <li key={id} className="p-4" onClick={() => updatePage(id)}>{link}</li>

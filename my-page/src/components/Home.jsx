@@ -1,31 +1,56 @@
 import React from 'react';
+import ExperienceCard from './ExperienceCard'
 import reactLogo from '../assets/react.svg'
 import tailwindLogo from '../assets/images/tailwind.png'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
+import {TypeAnimation} from 'react-type-animation'
 
 const Home = () => {
+    const buildLogos = [
+        {  
+            id: 1,
+            href: "https://vitejs.dev",
+            src: '/vite.svg',
+            alt: 'Vite logo'
+        },
+        {
+            id: 2,
+            href: "https://reactjs.org",
+            src: reactLogo,
+            alt: 'React logo'
+        },
+        {
+            id: 3,
+            href: 'https://tailwindcss.com/',
+            src: tailwindLogo,
+            alt: 'Tailwind Logo'
+        }
+    ]
+
+
     return (
-        <div className="p-10">            
-            <h1 className="font-bold text-4xl">Welcome!</h1>
-            <h2 className="font-bold text-2xl">My name is <span className="font-bold text-2xl text-rose-600">Jimmy.</span></h2>
-            <h2 className="text-xl">I'm a full-stack web developer.</h2>
-            <div className="text-3xl flex justify-center gap-10">
+        <div className="p-10 mt-10 w-full h-max mx-auto text-center flex flex-col">  
+            <TypeAnimation sequence={[
+                ' Welcome!', 2000, " Hi!", 2000, " Hello!", 2000, " Hey!", 2000
+            ]} speed={30} omitDeletionAnimation={true} cursor={false} repeat={Infinity} className='font-bold text-4xl md:text-7xl'/>          
+            <h2 className="font-bold text-2xl md:text-4xl p-2">
+                My name is <span className="font-bold text-2xl md:text-4xl text-rose-600">Jimmy.</span>
+            </h2>
+            <h2 className="text-xl p-2 mt-10">I'm a full-stack web developer.</h2>
+            <div className="text-3xl flex justify-center gap-10 mb-10">
                 <a href="https://www.linkedin.com/in/jimmehhuang/"><AiFillLinkedin/></a>
                 <a href="https://github.com/jimmehhuang"><AiFillGithub/></a>
             </div>
-            <div className="fixed-bottom-0">
-                <div className="flex flex-row items-end justify-center">
-                    <a href="https://vitejs.dev" target="_blank">
-                        <img src="/vite.svg" className="h-20 p-5" alt="Vite logo" />
-                    </a>
-                    <a href="https://reactjs.org" target="_blank">
-                        <img src={reactLogo} className="h-20 p-5" alt="React logo" />
-                    </a>
-                    <a href="https://tailwindcss.com/" target="_blank">
-                        <img src={tailwindLogo} className="h-20 p-5" alt="Tailwind logo" />
-                    </a>
+            <ExperienceCard/>
+            <div className="mt-48">
+                <p className="font-semibold">I created this website using Vite + React and Tailwind!</p>
+                <div className="flex flex-row justify-center">
+                    {buildLogos.map(({id, href, src, alt}) => (
+                        <a key={id} href={href} target="_blank">
+                            <img src={src} className='h-16 p-5' alt={alt}></img>
+                        </a>
+                    ))}
                 </div>
-                <p className="font-semibold">I created this website using Vite + React and Tailwind CSS!</p>
             </div>
         </div>
     );
