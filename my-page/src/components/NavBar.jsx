@@ -10,6 +10,10 @@ const NavBar = ({updatePage}) => {
 
     const navLinks = [
         {
+            id: 0,
+            link: 'Home'
+        },
+        {
             id: 1,
             link: 'About'
         },
@@ -17,12 +21,12 @@ const NavBar = ({updatePage}) => {
             id: 2,
             link: 'Projects'
         },
+        // {
+        //     id: 3,
+        //     link: 'Experience'
+        // },
         {
             id: 3,
-            link: 'Experience'
-        },
-        {
-            id: 4,
             link: 'Contact'
         }
     ]
@@ -37,12 +41,12 @@ const NavBar = ({updatePage}) => {
             <div onClick={changeNav} className="p-2 block md:hidden">
                 {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}                
             </div>
-            <div className={!nav ? "fixed right-0 top-12 w-{60%} bg-gray-800 ease-in-out duration-500" : "fixed right-[-100%] top-12 ease-in-out duration-500"}>
+            <div className={!nav ? "fixed right-0 top-12 w-{60%} bg-gray-900 ease-in-out duration-500" : "fixed right-[-100%] top-12 ease-in-out duration-500"}>
                <ul className="p-2">
                 {navLinks.map(({id, link}) => (            
                     <li key={id} className="p-4 border-b border-gray-500" onClick={() => {updatePage(id); changeNav();}}>{link}</li>
                     ))}
-            </ul> 
+                </ul> 
             </div>            
         </div>
     )
