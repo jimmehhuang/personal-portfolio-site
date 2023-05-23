@@ -2,7 +2,6 @@ import React from 'react';
 import ExperienceCard from './ExperienceCard'
 import reactLogo from '../assets/react.svg'
 import tailwindLogo from '../assets/images/tailwind.png'
-import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import {TypeAnimation} from 'react-type-animation'
 
 const Home = () => {
@@ -37,10 +36,6 @@ const Home = () => {
                 My name is <span className="font-bold text-2xl md:text-4xl text-rose-600">Jimmy.</span>
             </h2>
             <h2 className="text-xl p-2 mt-10">I'm a full-stack web developer.</h2>
-            <div className="text-3xl flex justify-center gap-10 mb-10">
-                <a href="https://www.linkedin.com/in/jimmehhuang/"><AiFillLinkedin/></a>
-                <a href="https://github.com/jimmehhuang"><AiFillGithub/></a>
-            </div>
             <ExperienceCard/>
             <div className="mt-48">
                 <p className="font-semibold">I created this website using Vite + React and Tailwind!</p>
