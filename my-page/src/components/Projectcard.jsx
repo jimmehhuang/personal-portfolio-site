@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-const Projectcard = ({src, app, repo, title, description}) => {
+const Projectcard = ({id, src, app, repo, title, description}) => {
   
     const [open, setOpen] = useState(false);
 
@@ -23,11 +23,15 @@ const Projectcard = ({src, app, repo, title, description}) => {
     //         )}
     //     </div>        
     // </div>
-    <div class="relative group">
+    <div key={id} class="relative group">
         <p>{title}</p>
         <img src={src} alt={src} className='h-60 w-72 rounded-md group-hover:brightness-50'></img>
         <div className='absolute left-0 top-10 invisible group-hover:visible'>
             <p className='p-4 w-full'>{description}</p>
+            <div className='flex flex-row justify-center gap-6 rounded-full'>
+                <a href={app}>App</a>
+                <a href={repo}>Repo</a>  
+            </div>            
         </div>        
     </div>
   )
