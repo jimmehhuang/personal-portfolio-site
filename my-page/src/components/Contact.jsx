@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <div>
+        <div className="section min-h-screen">
             <h1 className="text-2xl font-semibold p-5">Contact</h1>
             <form className="w-full max-w-lg">
                 <div className="flex flex-wrap mx-3 mb-6">

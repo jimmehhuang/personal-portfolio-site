@@ -35,11 +35,11 @@ const Projects = () => {
         }
     ]
     return (
-        <div>
-            <div class="p-10">
-                <h1 class="font-semibold text-2xl">These are some of my major projects I've worked on/contributed to!</h1>
+        <div className="section min-h-screen">
+            <div className="p-10">
+                <h1 className="font-semibold text-2xl">These are some of my major projects I've worked on/contributed to!</h1>
             </div>
-            <div class="p-5 flex flex-wrap justify-around gap-10">
+            <div className="p-5 flex flex-wrap justify-around gap-10">
                 {projectLinks.map((id, src, repo, app, title, description) => (
                     <Projectcard {...id} {...src} {...repo} {...app} {...title} {...description}/>
                 ))}

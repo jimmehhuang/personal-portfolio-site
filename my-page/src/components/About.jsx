@@ -4,7 +4,7 @@ import propic from '../assets/images/Mountainpose.jpg'
 
 const About = () => {
   return (
-        <div className="p-8 md:min-h-screen">
+        <div className="p-8 md:min-h-screen section">
             <h1 className="font-bold text-3xl p-8 rounded-xl">About Me!</h1>
             <div className="flex flex-col md:flex-row justify-center items-center p-8">
                 <img src={propic} className="h-48 w-48 rounded-full object-cover md:max-w-48"/>

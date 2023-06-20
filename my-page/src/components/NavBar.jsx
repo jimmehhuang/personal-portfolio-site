@@ -31,7 +31,7 @@ const NavBar = ({updatePage}) => {
         }
     ]
     return (
-        <header className='flex justify-between items-center'>
+        <header className='flex justify-between items-center bg-gray-700 text-white'>
             <button className="p-4 font-semibold md:text-xl" onClick={() => {updatePage(0); setNav(true);}}>JH</button>
             <ul className="hidden md:flex">
                 {navLinks.map(({id, link}) => (            
