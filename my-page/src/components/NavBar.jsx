@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import { fullpageApi } from "@fullpage/react-fullpage";
 
 const NavBar = () => {
     const [nav, setNav] = useState(true);
@@ -36,7 +37,9 @@ const NavBar = () => {
             <div className={!nav ? "fixed top-24 w-full bg-green-950 ease-in-out duration-500" : "fixed top-[-100%] w-full ease-in-out duration-500"}>
                <ul className="p-2">
                 {navLinks.map(({id, link}) => (            
-                    <li key={id} className="p-2" onClick={() => {changeNav();}}>{link}</li>
+                    <li key={id} className="p-2" onClick={() => changeNav()}>
+                        <a href={`#${link}`}>{link}</a>
+                    </li>
                     ))}
                 </ul> 
             </div>            

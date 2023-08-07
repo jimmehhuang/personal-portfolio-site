@@ -7,7 +7,7 @@ import Contact from './components/Contact'
 import Projects from './components/Projects'
 import ReactFullpage from '@fullpage/react-fullpage'
 
-const anchors = ["home", "about", "projects", "contact"]
+const anchors = ["Home", "About", "Projects", "Contact"]
 
 const App = () => {
 
