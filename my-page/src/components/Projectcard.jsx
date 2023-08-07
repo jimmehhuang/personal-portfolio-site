@@ -35,11 +35,11 @@ const Projectcard = () => {
     return (
         <div className="relative p-5 flex flex-wrap justify-around">
             {projectLinks.map(({id, src, repo, app, title, description}) => (
-                <div key={id} className='group'>
+                <div key={id} className='group p-2'>
                     <p>{title}</p>
-                    <img src={src} alt={src} className='h-60 w-72 rounded-md group-hover:brightness-50'></img>
+                    <img src={src} alt={src} className='h-32 w-40 rounded-md group-hover:brightness-50'></img>
                     <div className='absolute bottom-0 top-12 invisible group-hover:visible '>
-                        <p className='p-4 w-72'>{description}</p>
+                        <p className='p-4 w-60'>{description}</p>
                         <div className='flex flex-row justify-center gap-6 border-white'>
                             <a href={app} className='border-2 p-2 rounded-lg'>App</a>
                             <a href={repo} className='border-2 p-2 rounded-lg'>Repo</a>

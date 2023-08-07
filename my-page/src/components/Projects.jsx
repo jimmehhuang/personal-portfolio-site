@@ -6,10 +6,10 @@ const Projects = () => {
 
     return (
         <div className="section min-h-screen">
-            <div className="p-10">
-                <h1 className="font-semibold text-2xl">These are some of my major projects I've worked on/contributed to!</h1>
+            <div className="mt-8">
+                <h1 className="font-semibold text-2xl">Projects and Skills</h1>
             </div>
-            <Projectcard />
+            <Projectcard/>
             <ExperienceCard/>
         </div>
     )

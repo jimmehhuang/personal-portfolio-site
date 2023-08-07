@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import { fullpageApi } from "@fullpage/react-fullpage";
+// import {Collapse} from 'react-collapse'
 
 const NavBar = () => {
     const [nav, setNav] = useState(true);
@@ -31,9 +31,9 @@ const NavBar = () => {
                     <li key={id} className="p-4 cursor-pointer">{link}</li>
                     ))}
             </ul>
-            <div onClick={changeNav} className="p-4 block md:hidden">
+            <button onClick={changeNav} className="p-4 block md:hidden">
                 {!nav ? <AiOutlineClose size={30}/> : <AiOutlineMenu size={30} />}                
-            </div>
+            </button>
             <div className={!nav ? "fixed top-24 w-full bg-green-950 ease-in-out duration-500" : "fixed top-[-100%] w-full ease-in-out duration-500"}>
                <ul className="p-2">
                 {navLinks.map(({id, link}) => (            
