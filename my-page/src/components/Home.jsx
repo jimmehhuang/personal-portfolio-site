@@ -24,7 +24,7 @@ const Home = () => {
                     My name is <span className="font-bold text-3xl md:text-4xl text-[#2BC6AA]">Jimmy.</span>
                 </h2>
                 <h2 className="text-xl p-2 mt-10">I'm a full-stack web developer.</h2>
-                <a href="#About" className='my-2 h-8 w-36 border-2 border-white text-semibold hover:bg-white hover:text-[#2BC6AA]'>
+                <a href="#About" className='my-2 h-8 w-36 border-2 rounded-md border-white text-semibold hover:bg-white hover:text-[#2BC6AA]'>
                     Come on in!
                 </a>
             </div>

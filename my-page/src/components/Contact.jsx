@@ -10,6 +10,9 @@ const Contact = () => {
                 <a href="https://www.linkedin.com/in/jimmehhuang/"><AiFillLinkedin/></a>
                 <a href="https://github.com/jimmehhuang"><AiFillGithub/></a>
             </div>
+            <a href="#Home" className='my-2 h-8 w-36 border-2 rounded-md border-white text-semibold hover:bg-white hover:text-[#2BC6AA]'>
+                Return
+            </a>
         </div>
     )
 }
