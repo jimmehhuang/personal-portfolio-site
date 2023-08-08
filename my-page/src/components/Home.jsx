@@ -19,7 +19,8 @@ const Home = () => {
                     omitDeletionAnimation={true} 
                     cursor={false} 
                     repeat={Infinity}
-                    className='font-bold md:text-7xl'/>          
+                    className='font-bold text-4xl md:text-7xl'
+                />
                 <h2 className="font-bold text-2xl md:text-4xl p-2">
                     My name is <span className="font-bold text-3xl md:text-4xl text-[#2BC6AA]">Jimmy.</span>
                 </h2>

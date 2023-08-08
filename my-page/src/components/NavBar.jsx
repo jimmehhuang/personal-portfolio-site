@@ -28,7 +28,9 @@ const NavBar = () => {
             <button className="p-4 font-semibold text-xl" onClick={() => {setNav(true);}}>Jimmy Huang</button>
             <ul className="hidden md:flex">
                 {navLinks.map(({id, link}) => (            
-                    <li key={id} className="p-4 cursor-pointer">{link}</li>
+                    <li key={id} className="p-4 cursor-pointer">
+                        <a href={`#${link}`}>{link}</a>
+                    </li>
                     ))}
             </ul>
             <button onClick={changeNav} className="p-4 block md:hidden">

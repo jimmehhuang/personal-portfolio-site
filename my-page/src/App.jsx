@@ -12,7 +12,7 @@ const anchors = ["Home", "About", "Projects", "Contact"]
 const App = () => {
 
   return (
-    <div className='fullpage'>
+    <body className='fullpage'>
       {/* <NavBar/> */}
       <ReactFullpage
       licenseKey={'gplv3-license'}
@@ -37,8 +37,7 @@ const App = () => {
           );
         }}
       />
-    </div>
-    
+    </body>
   )   
 }
 
