@@ -17,8 +17,6 @@ const App = () => {
       <ReactFullpage
       licenseKey={'gplv3-license'}
         anchors={anchors}
-        navigation
-        navigationTooltips={anchors}
         navigat
         sectionsColor={["#003927", "#05285E", "#330557", "#120120"]}
         onLeave={(origin, destination, direction) => {
