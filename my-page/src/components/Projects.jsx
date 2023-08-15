@@ -5,7 +5,7 @@ import ExperienceCard from './ExperienceCard'
 const Projects = () => {
 
     return (
-        <div className="section min-h-screen flex flex-col">
+        <div className="section min-h-screen">
             <div className="mt-8">
                 <h1 className="font-semibold text-2xl">Projects</h1>
             </div>
