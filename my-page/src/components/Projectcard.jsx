@@ -33,13 +33,13 @@ const Projectcard = () => {
     ]
 
     return (
-        <div className="relative p-5 flex flex-wrap justify-around">
+        <div className="relative p-5 justify-around">
             {projectLinks.map(({id, src, repo, app, title, description}) => (
-                <div key={id} className='group p-2'>
-                    <p>{title}</p>
-                    <img src={src} alt={src} className='h-32 w-40 rounded-md '></img>
-                    <div className='absolute bottom-0 top-12 invisible group-hover:visible'>
-                        <p className='p-4 w-60'>{description}</p>
+                <div key={id} className='group p-2 relative'>
+                    <img src={src} alt={src} className='h-32 rounded-md group-hover:brightness-50'></img>
+                    <div className='absolute top-2 invisible group-hover:visible'>
+                        <p>{title}</p>
+                        <p>{description}</p>
                         <div className='flex flex-row justify-center gap-6 border-white'>
                             <a href={app} className='border-2 p-2 rounded-lg hover:text-black hover:bg-white'>App</a>
                             <a href={repo} className='border-2 p-2 rounded-lg hover:text-black hover:bg-white'>Repo</a>
