@@ -40,7 +40,7 @@ const Projectcard = () => {
                         <img src={src} alt={src} className='absolute top-0 h-full w-full aspect-auto rounded-md group-hover:brightness-50'></img>
                     </div>
                     <div className='absolute m-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 invisible group-hover:visible col-span-1'>
-                        <p>{title}</p>
+                        <p className='font-semibold'>{title}</p>
                         <p className='truncate'>{description}</p>
                         <div className='flex flex-row justify-center gap-6 border-white'>
                             <a href={app} className='border-2 p-2 rounded-lg hover:text-black hover:bg-white'>App</a>
